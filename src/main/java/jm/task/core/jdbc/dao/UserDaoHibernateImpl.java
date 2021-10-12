@@ -12,7 +12,6 @@ public class UserDaoHibernateImpl implements UserDao {
 
     }
 
-
     @Override
     public void createUsersTable() {
         try (Session session = getSessionFactory().openSession()) {
@@ -40,7 +39,7 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public void saveUser(String name, String lastName, byte age) {
         try (Session session = getSessionFactory().openSession()) {
-           session.beginTransaction();
+            session.beginTransaction();
             session.save(new User(name, lastName, age));
             session.getTransaction().commit();
         }
