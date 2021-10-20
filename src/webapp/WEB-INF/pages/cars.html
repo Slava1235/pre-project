@@ -7,9 +7,18 @@
 </head>
 <body>
 <div>
-    <th:block th:each="msg : ${message}">
-        <h1 th:text="${msg}"></h1>
-    </th:block>
+    <table border="1">
+        <tr>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Age</th>
+        </tr>
+        <tr th:each ="msg : ${message}">
+            <td th:utext="${msg.getModel()}">...</td>
+            <td th:utext="${msg.getPrice()}">...</td>
+            <td th:utext="${msg.getAge()}">...</td>
+        </tr>
+    </table>
 </div>
 </body>
 </html>
