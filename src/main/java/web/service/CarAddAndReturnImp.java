@@ -1,14 +1,14 @@
-package web.servies;
+package web.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
+import org.springframework.stereotype.Service;
 import web.dao.CarAddAndReturnDAOImp;
 import web.model.Car;
 
 import java.util.List;
 
-@Component
+@Service
 public class CarAddAndReturnImp implements CarAddAndReturn {
     @Autowired
     private CarAddAndReturnDAOImp carAddAndReturnDAOImp;
