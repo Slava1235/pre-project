@@ -1,9 +1,9 @@
-package web.service;
+package web.dao;
 
 import web.model.Car;
 
 import java.util.List;
 
-public interface CarAddAndReturn {
+public interface CarDAO {
     List<Car> getReturnCars(String count);
 }
