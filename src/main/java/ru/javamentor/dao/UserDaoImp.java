@@ -1,12 +1,13 @@
 package ru.javamentor.dao;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import ru.javamentor.model.User;
 
 import javax.persistence.*;
 import java.util.List;
 
-@Component
+@Repository
 public class UserDaoImp implements UserDao {
 
     @PersistenceContext
